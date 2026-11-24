@@ -15,10 +15,11 @@ let terminou = false;
 function acelerar(jogador){
     if(terminou) return;
 
-    const limite = Math.max(0, chegada.offsetleft - carro1.offsetWidth);
+    const limite = Math.max(0, chegada.offsetLeft - carro1.offsetWidth);
     if(jogador === 1){
         position1 = Math.min(position1 + 15, limite);
-        carro1.style.left = position1 + `${position}px`;
+        console.log(limite)
+        carro1.style.left = `${position1}px`;
 
         if(position1 >= limite){
             mensagem.textContent = "🏆 jogador 1 venceu!";
@@ -28,8 +29,8 @@ function acelerar(jogador){
     }
 
     if(jogador === 2){
-        position2 = Math.min(position1 + 15, limite);
-        carro1.style.left = position1 + `${position}px`;
+        position2 = Math.min(position2 + 15, limite);
+        carro2.style.left = `${position2}px`;
 
         if(position2 >= limite){
             mensagem.textContent = "🏆 jogador 2 venceu!";
