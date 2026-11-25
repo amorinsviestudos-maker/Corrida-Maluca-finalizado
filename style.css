@@ -57,4 +57,10 @@ button:hover {
     transform: scale(1.05);
 }
 
+button:disabled {
+    background-color: #555;
+    color: #888;
+    cursor: not-allowed;
+    transform: none;
+}
 
